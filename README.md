@@ -1,104 +1,72 @@
 # PRODIGY_WD_01
 TASK 1-Create an interactive navigation menu
+index.html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Navigation Menu</title>
-    <link rel="stylesheet" href="styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Landing Page Design</title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<!-- fontawesome cdn -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
 </head>
 <body>
-    <nav id="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <div id="content">
-        <section id="home">
-            <h1>Home</h1>
-            <p>Welcome to the homepage.</p>
-        </section>
-        <section id="about">
-            <h1>About</h1>
-            <p>Learn more about us.</p>
-        </section>
-        <section id="services">
-            <h1>Services</h1>
-            <p>Discover our services.</p>
-        </section>
-        <section id="contact">
-            <h1>Contact</h1>
-            <p>Get in touch with us.</p>
-        </section>
-    </div>
+	<section class="hero">
+		<header>
+			<div class="container">
+				<div class="logo">
+					<h2>Web<span></span></h2>
+				</div>
 
-    <script src="script.js"></script>
+				<nav class="menu-overlay">
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Contact</a></li>
+						<li class="action"><a href="#">Learn More</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="details">
+			<div class="container">
+				<h1>Build Your <br>Business Website Easily</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				<a href="#">Create Now</a>
+			</div>
+		</div>
+
+		<div class="connect">
+			<div class="container">
+				<h3>Connect with us</h3>
+				<div class="links">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
+					<a href="https://github.com/Ankit7rma">
+                        <i class="fa-brands fa-github"></i></a>
+					<a href="https://www.linkedin.com/in/ankit-sharma-a58701169/"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+			</div>			
+		</div>
+	</section>
+
+	<div class="hamb">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<!-- javascript code file added -->
+	<script type="text/javascript" src="./index.js"></script>
+
 </body>
 </html>
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    z-index: 1000;
-    transition: background-color 0.3s;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 15px 20px;
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    color: #fff;
-}
-
-#content {
-    padding-top: 60px; /* to prevent content from being hidden under the fixed navbar */
-}
-
-section {
-    padding: 50px;
-    margin: 50px 0;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-window.addEventListener('scroll', function() {
-    var navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = '#222';
-    } else {
-        navbar.style.backgroundColor = '#333';
-    }
-});
